@@ -4,53 +4,67 @@ import typing
 
 __all__ = ["print"]
 
-
 class PrintColor:
     colors = {
-        "purple": "\033[95m",
-        "blue": "\033[94m",
-        "green": "\033[92m",
-        "yellow": "\033[33m",
+        "white": "\033[37m",
         "red": "\033[31m",
         "magenta": "\033[35m",
+        "orange": "\033[38;5;202m",
+        "yellow": "\033[33m",
+        "green": "\033[92m",
         "cyan": "\033[36m",
+        "indigo": "\033[38;5;62m",
+        "blue": "\033[94m",
+        "purple": "\033[95m",
         "black": "\033[30m",
-        "white": "\033[37m",
+        "lightgray": "\033[38;5;243m",
+        "pink": "\033[38;5;197m",
     }
 
     # Abbreviations and aliases
-    colors["v"] = colors["purple"]  # v for violet
-    colors["p"] = colors["purple"]
-    colors["b"] = colors["blue"]
-    colors["g"] = colors["green"]
-    colors["y"] = colors["yellow"]
+    colors["w"] = colors["white"]
     colors["r"] = colors["red"]
     colors["m"] = colors["magenta"]
+    colors["o"] = colors["orange"]
+    colors["y"] = colors["yellow"]
+    colors["g"] = colors["green"]
     colors["c"] = colors["cyan"]
+    colors["b"] = colors["blue"]
+    colors["i"] = colors["indigo"]
+    colors["p"] = colors["purple"]
     colors["k"] = colors["black"]
-    colors["w"] = colors["white"]
+    colors["lg"] = colors["lightgray"]
+    colors["pi"] = colors["pink"]
 
     backgrounds = {
+        "white": "\033[37m",
+        "red": "\033[31m",
+        "magenta": "\033[35m",
+        "orange": "\033[38;5;202m",
+        "yellow": "\033[33m",
+        "green": "\033[92m",
+        "cyan": "\033[36m",
+        "indigo": "\033[38;5;62m",
+        "blue": "\033[94m",
+        "purple": "\033[95m",
         "grey": "\033[40m",
-        "red": "\033[41m",
-        "green": "\033[42m",
-        "yellow": "\033[43m",
-        "blue": "\033[44m",
-        "magenta": "\033[45m",
-        "cyan": "\033[46m",
-        "white": "\033[47m",
+        "black": "\033[30m",
+        "pink": "\033[38;5;197m",
     }
 
     # Abbreviations and aliases
+    backgrounds["w"] = backgrounds["white"]
+    backgrounds["r"] = backgrounds["red"]
+    backgrounds["m"] = backgrounds["magenta"]
+    backgrounds["o"] = backgrounds["orange"]
+    backgrounds["y"] = backgrounds["yellow"]
+    backgrounds["g"] = backgrounds["green"]
+    backgrounds["c"] = backgrounds["cyan"]
+    backgrounds["b"] = backgrounds["blue"]
+    backgrounds["i"] = backgrounds["indigo"]
     backgrounds["gray"] = backgrounds["grey"]
     backgrounds["gr"] = backgrounds["grey"]
-    backgrounds["r"] = backgrounds["red"]
-    backgrounds["g"] = backgrounds["green"]
-    backgrounds["y"] = backgrounds["yellow"]
-    backgrounds["b"] = backgrounds["blue"]
-    backgrounds["m"] = backgrounds["magenta"]
-    backgrounds["c"] = backgrounds["cyan"]
-    backgrounds["w"] = backgrounds["white"]
+    backgrounds["pi"] = backgrounds["pink"]
 
     formats = {"bold": "\033[1m", "underline": "\033[4m", "blink": "\033[5m"}
 
@@ -115,6 +129,7 @@ class PrintColor:
 Color = typing.Literal[
     "purple",
     "blue",
+    "indigo",
     "green",
     "yellow",
     "red",
@@ -122,6 +137,9 @@ Color = typing.Literal[
     "cyan",
     "black",
     "white",
+    "orange",
+    "lightgray",
+    "pink",
     "v",
     "p",
     "b",
@@ -132,26 +150,36 @@ Color = typing.Literal[
     "c",
     "k",
     "w",
+    "o",
+    "li",
+    "pi",
 ]
 
 Background = typing.Literal[
     "grey",
     "red",
+    "orange",
     "green",
     "yellow",
     "blue",
+    "indigo",
     "magenta",
     "cyan",
     "white",
     "gray",
+    "pink",
     "gr",
     "r",
+    "o",
     "g",
     "y",
     "b",
+    "i",
     "m",
     "c",
     "w",
+    "o",
+    "pi",
 ]
 
 Format = typing.Literal["bold", "underline", "blink"]
