@@ -30,50 +30,74 @@ class PrintColor:
     }
 
     # Abbreviations and aliases
-    colors["w"] = colors["white"]
-    colors["r"] = colors["red"]
-    colors["m"] = colors["magenta"]
-    colors["o"] = colors["orange"]
-    colors["y"] = colors["yellow"]
-    colors["g"] = colors["green"]
-    colors["c"] = colors["cyan"]
-    colors["b"] = colors["blue"]
-    colors["i"] = colors["indigo"]
-    colors["p"] = colors["purple"]
     colors["k"] = colors["black"]
-    colors["lg"] = colors["lightgray"]
+    colors["dg"] = colors["darkgray"]
+    colors["r"] = colors["red"]
+    colors["lr"] = colors["lightred"]
+    colors["y"] = colors["yellow"]
+    colors["ly"] = colors["lightyellow"]
+    colors["g"] = colors["green"]
+    colors["lg"] = colors["lightgreen"]
+    colors["b"] = colors["blue"]
+    colors["lb"] = colors["lightblue"]
+    colors["m"] = colors["magenta"]
+    colors["lm"] = colors["lightmagenta"]
+    colors["c"] = colors["cyan"]
+    colors["lc"] = colors["lightcyan"]
+    colors["gr"] = colors["gray"]
+    colors["w"] = colors["white"]
+    colors["p"] = colors["purple"]
     colors["pi"] = colors["pink"]
+    colors["o"] = colors["orange"]
+    colors["lig"] = colors["lightgray"]
+    colors["i"] = colors["indigo"]
 
     backgrounds = {
-        "white": "\033[37m",
-        "red": "\033[31m",
-        "magenta": "\033[35m",
-        "orange": "\033[38;5;202m",
-        "yellow": "\033[33m",
-        "green": "\033[92m",
-        "cyan": "\033[36m",
-        "indigo": "\033[38;5;62m",
-        "blue": "\033[94m",
-        "purple": "\033[95m",
-        "grey": "\033[40m",
-        "black": "\033[30m",
-        "pink": "\033[38;5;197m",
+        "black": "\033[40m",
+        "darkgray": "\033[100m",
+        "red": "\033[41m",
+        "lightred": "\033[101m",
+        "yellow": "\033[43m",
+        "lightyellow": "\033[103m",
+        "green": "\033[42m",
+        "lightgreen": "\033[102m",
+        "blue": "\033[44m",
+        "lightblue": "\033[104m",
+        "magenta": "\033[45m",
+        "lightmagenta": "\033[105m",
+        "cyan": "\033[46m",
+        "lightcyan": "\033[106m",
+        "gray": "\033[47m",
+        "white": "\033[107m",
+        "purple": "\033[48;5;93m",  # ANSI 256-color start from here
+        "pink": "\033[48;5;197m",
+        "orange": "\033[48;5;202m",
+        "lightgray": "\033[48;5;243m",
+        "indigo": "\033[48;5;62m",
     }
 
     # Abbreviations and aliases
-    backgrounds["w"] = backgrounds["white"]
+    backgrounds["k"] = backgrounds["black"]
+    backgrounds["dg"] = backgrounds["darkgray"]
     backgrounds["r"] = backgrounds["red"]
-    backgrounds["m"] = backgrounds["magenta"]
-    backgrounds["o"] = backgrounds["orange"]
+    backgrounds["lr"] = backgrounds["lightred"]
     backgrounds["y"] = backgrounds["yellow"]
     backgrounds["ly"] = backgrounds["lightyellow"]
     backgrounds["g"] = backgrounds["green"]
-    backgrounds["c"] = backgrounds["cyan"]
+    backgrounds["lg"] = backgrounds["lightgreen"]
     backgrounds["b"] = backgrounds["blue"]
-    backgrounds["i"] = backgrounds["indigo"]
-    backgrounds["gray"] = backgrounds["grey"]
-    backgrounds["gr"] = backgrounds["grey"]
+    backgrounds["lb"] = backgrounds["lightblue"]
+    backgrounds["m"] = backgrounds["magenta"]
+    backgrounds["lm"] = backgrounds["lightmagenta"]
+    backgrounds["c"] = backgrounds["cyan"]
+    backgrounds["lc"] = backgrounds["lightcyan"]
+    backgrounds["gr"] = backgrounds["gray"]
+    backgrounds["w"] = backgrounds["white"]
+    backgrounds["p"] = backgrounds["purple"]
     backgrounds["pi"] = backgrounds["pink"]
+    backgrounds["o"] = backgrounds["orange"]
+    backgrounds["lig"] = backgrounds["lightgray"]
+    backgrounds["i"] = backgrounds["indigo"]
 
     formats = {"bold": "\033[1m", "underline": "\033[4m", "blink": "\033[5m"}
 
@@ -136,63 +160,87 @@ class PrintColor:
 
 
 Color = typing.Literal[
-    "purple",
-    "blue",
-    "indigo",
+    "black",
+    "grey",
+    "red",
+    "lightred",
     "green",
+    "lightgreen",
     "yellow",
     "lightyellow",
-    "red",
+    "blue",
+    "lightblue",
     "magenta",
+    "lightmagenta",
     "cyan",
-    "black",
+    "lightcyan",
     "white",
+    "purple",
+    "pink",
     "orange",
     "lightgray",
-    "pink",
-    "v",
-    "p",
-    "b",
+    "indigo",
+    "k",
+    "gr",
+    "r",
+    "lr",
     "g",
+    "lg",
     "y",
     "ly",
-    "r",
+    "b",
+    "lb",
     "m",
+    "lm",
     "c",
-    "k",
+    "lc",
     "w",
-    "o",
-    "li",
+    "p",
     "pi",
+    "o",
+    "lig",
+    "i",
 ]
 
 Background = typing.Literal[
     "grey",
     "red",
-    "orange",
+    "lightred",
     "green",
+    "lightgreen",
     "yellow",
     "lightyellow",
     "blue",
-    "indigo",
+    "lightblue",
     "magenta",
+    "lightmagenta",
     "cyan",
+    "lightcyan",
     "white",
-    "gray",
+    "purple",
     "pink",
+    "orange",
+    "lightgray",
+    "indigo",
     "gr",
     "r",
-    "o",
+    "lr",
     "g",
+    "lg",
     "y",
     "ly",
     "b",
-    "i",
+    "lb",
     "m",
+    "lm",
     "c",
+    "lc",
     "w",
-    "o",
+    "p",
     "pi",
+    "o",
+    "lig",
+    "i",
 ]
 
 Format = typing.Literal["bold", "underline", "blink"]
