@@ -6,19 +6,27 @@ __all__ = ["print"]
 
 class PrintColor:
     colors = {
-        "white": "\033[37m",
-        "red": "\033[31m",
-        "magenta": "\033[35m",
-        "orange": "\033[38;5;202m",
-        "yellow": "\033[33m",
-        "green": "\033[92m",
-        "cyan": "\033[36m",
-        "indigo": "\033[38;5;62m",
-        "blue": "\033[94m",
-        "purple": "\033[95m",
         "black": "\033[30m",
-        "lightgray": "\033[38;5;243m",
-        "pink": "\033[38;5;197m",
+        "darkgray": "\033[90m",  # Dark gray
+        "red": "\033[31m",
+        "lightred": "\033[91m",
+        "yellow": "\033[33m",
+        "lightyellow": "\033[93m",
+        "green": "\033[32m",
+        "lightgreen": "\033[92m",
+        "blue": "\033[34m",
+        "lightblue": "\033[94m",
+        "magenta": "\033[35m",
+        "lightmagenta": "\033[95m",
+        "cyan": "\033[36m",
+        "lightcyan": "\033[96m",
+        "gray": "\033[37m",  # Light gray
+        "white": "\033[97m",
+        "purple": "\033[38;5;93m",  # ???(Start from here are all ANSI 256-color)
+        "pink": "\033[38;5;197m",  # pink
+        "orange": "\033[38;5;202m",  # light? orange
+        "lightgray": "\033[38;5;243m",  # lightgray
+        "indigo": "\033[38;5;62m",  # indigo(light?)
     }
 
     # Abbreviations and aliases
@@ -58,6 +66,7 @@ class PrintColor:
     backgrounds["m"] = backgrounds["magenta"]
     backgrounds["o"] = backgrounds["orange"]
     backgrounds["y"] = backgrounds["yellow"]
+    backgrounds["ly"] = backgrounds["lightyellow"]
     backgrounds["g"] = backgrounds["green"]
     backgrounds["c"] = backgrounds["cyan"]
     backgrounds["b"] = backgrounds["blue"]
@@ -132,6 +141,7 @@ Color = typing.Literal[
     "indigo",
     "green",
     "yellow",
+    "lightyellow",
     "red",
     "magenta",
     "cyan",
@@ -145,6 +155,7 @@ Color = typing.Literal[
     "b",
     "g",
     "y",
+    "ly",
     "r",
     "m",
     "c",
@@ -161,6 +172,7 @@ Background = typing.Literal[
     "orange",
     "green",
     "yellow",
+    "lightyellow",
     "blue",
     "indigo",
     "magenta",
@@ -173,6 +185,7 @@ Background = typing.Literal[
     "o",
     "g",
     "y",
+    "ly",
     "b",
     "i",
     "m",
